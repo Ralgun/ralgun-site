@@ -12,7 +12,7 @@ var con = sql.createPool({
 });
 
 
-  
+//Get the newest article in the specified db
 function getNewest(callback) {
     con.getConnection(function(err, connection) {
         if(err) { 
