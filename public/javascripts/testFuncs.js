@@ -1,3 +1,0 @@
-function funguje() {
-    alert("Ukulele")
-}
