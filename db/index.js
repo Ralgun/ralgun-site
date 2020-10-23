@@ -21,7 +21,7 @@ function getNewest(callback) {
         return; 
         }
 
-        var sql = `SELECT content, title FROM \`${config.db_table}\``;
+        var sql = `SELECT content, title, upload_time FROM \`${config.db_table}\` ORDER BY upload_time DESC`;
         connection.query(sql, function(err, results) {
             connection.release()
             if(err) { 
