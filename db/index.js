@@ -8,7 +8,7 @@ var con = sql.createPool({
     host     : 'localhost',
     user     : 'root',
     password : config.db_password,
-    database : config.db_table
+    database : config.db
 });
 
 
@@ -21,7 +21,7 @@ function getNewest(callback) {
         return; 
         }
 
-        var sql = "SELECT content, title FROM \`ralgun.blog.articles\`";
+        var sql = `SELECT content, title FROM \`${config.db_table}\``;
         connection.query(sql, function(err, results) {
             connection.release()
             if(err) { 
