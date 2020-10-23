@@ -1,0 +1,3 @@
+function funguje() {
+    alert("Ukulele")
+}
